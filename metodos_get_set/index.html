@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos get e set</title>
+</head>
+<body>
+    <script>
+
+        // Método set
+
+        //Modificação, ele trabalha muitas vezes junto com o get. O set ele não retorna nenhuma valor
+
+       /* class TransportSpaceship {
+            constructor(name) {
+                this.name = name
+                this.currentVelocity = 0
+            }
+
+            set velocity(newVelocity) {
+                if(newVelocity > 120) {
+                    this.currentVelocity = 120
+                } else {
+                    this.currentVelocity = newVelocity
+
+                }
+            }
+        }
+
+        let spaceship = new TransportSpaceship("Transportador")
+
+        spaceship.velocity = 130
+
+        console.log(spaceship)*/
+
+        //método get
+        
+        //Leitura, não será substituído caso outro método tente
+
+        class ResourceProcessStation {
+            constructor(name, monthlyProcessedLoad) {
+                this.name = name
+                this.monthlyProcessedLoad = monthlyProcessedLoad
+            }
+
+            get weeklyProcessedLoad() {
+                return this.monthlyProcessedLoad / 4
+            }
+
+        }
+
+        let resourceProcessor =new ResourceProcessStation("Gaia", 500)
+
+        console.log(resourceProcessor.weeklyProcessedLoad)
+
+        resourceProcessor.monthlyProcessedLoad = 600
+
+        console.log(resourceProcessor.weeklyProcessedLoad)
+
+
+
+    </script>
+    
+</body>
+</html>

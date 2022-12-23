@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metódos</title>
+</head>
+<body>
+    <script>
+        class Spaceship {
+            constructor(name){
+                //método construtor
+                this.name = name
+                this.velocity = 0
+            }
+
+            speedUp(acceleration) {
+                //método normal
+                this.velocity += acceleration
+            }
+        }
+
+        //instância
+
+        let artemis = new Spaceship("Ártemis")
+
+        /*console.log(artemis)*/
+
+       /*acelerando a nave*/
+
+       artemis.speedUp(10)
+       artemis.speedUp(15)
+
+       console.log(artemis)
+        
+
+        
+    </script>
+    
+</body>
+</html>

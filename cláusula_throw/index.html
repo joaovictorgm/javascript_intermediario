@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cláusula throw, try, catch e finally</title>
+</head>
+<body>
+    <script>
+        class SpaceshipWeapon {
+            constructor(identifier){
+                this.identifier = identifier
+                this.shotsLeft = 5
+            }
+            shoot() {
+                if(this.shotsLeft > 0) {
+                    console.log("Bang!")
+                    this.shotsLeft -= 1
+                }else {
+                    throw new Error("Arma " + this.identifier + " sem munição")
+                    //instancia como um erro
+                }
+                
+            }
+            reload() {
+                this.shotsLeft = 5
+            }
+        }
+
+        let fenixWeapon = new SpaceshipWeapon(10)
+        try {
+            // o try consegue tratar o erro
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        fenixWeapon.shoot()
+        
+        } catch(e){
+        // recebe um parâmetro do erro que foi lançado armazenado no e
+        console.log(e.message)
+        fenixWeapon.reload()
+        }finally {
+            // finally é opcional executa mesmo que não der erro
+            console.log("Arma deu bons tiros")
+        }
+        
+        console.log(fenixWeapon)
+    </script>
+    
+</body>
+</html>

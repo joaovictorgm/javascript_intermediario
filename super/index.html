@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método super</title>
+</head>
+<body>
+    <script>
+       /* class Spaceship {
+            constructor(name, maxCrew, maxRecommendedValue){
+                this.name = name
+                this.maxCrew = maxCrew
+                this.maxRecommendedValue = maxRecommendedValue
+                this.currentVelocity = 0
+            }
+            speedUp(acceleration) {
+                this.currentVelocity += acceleration
+                if(this.currentVelocity > this.maxRecommendedValue){
+                    alert("VELOCIDADE MÁXIMA ULTRAPASSADA!!\n Diminua a velocidade ou poderá provocar danos à nave. ")
+                } 
+            }
+        }
+        //Reaproveitando o construtor
+            class TransportSpaceship extends Spaceship {
+                constructor(name, maxCrew, maxRecommendedValue,maxLoadWeight){
+                    super(name, maxCrew, maxRecommendedValue)
+                    this.maxLoadWeight = maxLoadWeight
+
+                }
+
+                speedUp(acceleration) {
+                    acceleration /= 2
+                    alert("Incrementando velocidade em " + acceleration + "km/s")
+                    super.speedUp(acceleration)
+                    //cortando na metade a função aceleração
+
+                }
+            }
+            // instância a classe "transportSpaceship"
+            let transportSpaceship = new TransportSpaceship("Transportadora", 4, 100, 400)
+
+            console.log(transportSpaceship)
+
+            transportSpaceship.speedUp(210)*/
+            
+            class SpacialStation {
+
+constructor(name, size) {
+
+ this.name = name
+
+ this.size = size
+
+}
+
+}
+
+
+
+
+
+class ResourceProcessor {
+
+constructor(name, size) {
+
+ super(name, size)
+
+}
+
+  
+
+totalLoadProcessedInaWeek() {
+
+ (this.size * 1.4) / 4
+
+}
+
+}
+
+
+
+
+
+let resouceProcessor = new ResourceProcessor("Mineradora", 120000)
+
+resouceProcessor.totalLoadProcessedInaWeek()
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

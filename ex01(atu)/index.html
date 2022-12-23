@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos no Html</title>
+</head>
+<body>
+    <h2>Eventos no HTML</h2>
+    <div>
+        <!--aciona a mensagem toda vez que o mouse passa pelo evento-->
+        <label for="onMouseEnter">Entrada do Mouse:</label>
+        <input type="text" id="onMouseenter" onmouseenter="mouseEnter()">
+    </div>
+    <br>
+    <div>
+        <!--aciona a mensagem toda vez que mudará o valor-->
+        <label for="onChange">Mudança de Valor:</label>
+        <input type="text" id="onChange" onchange="alert('Mudança de valor')">
+    </div>
+    <br>
+    <div>
+        <!--adiciona a mensagem quando o elemento for focado-->
+        <label for="onFocus">Entrada de Foco:</label>
+        <input type="text" id="onFocus" onfocus="alert('foco no elemento')">
+    </div>
+    <br>
+    <div>
+        <label for="onBlur">Saida de Foco:</label>
+        <input type="text" id="onBlur">
+    </div>
+    <br>
+    <button onclick="onClick()"> 
+        Clique-me!
+    </button>
+    <script src="index.js"></script>
+</body>
+</html>
