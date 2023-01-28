@@ -69,10 +69,10 @@ if (button.innerText === 'Copy') {
     button.innerText ='Copied!'
     //adiciona as cores dos parametros css para o botão
     button.classList.add('sucess')
+    button.innerText = 'Copy'
     //ação para copiar o texto da area de transferencia
     navigator.clipboard.writeText(resultInput.value)
 }else{
-    button.innerText = 'Copy'
     button.classList.remove('sucess')
 }
 })
